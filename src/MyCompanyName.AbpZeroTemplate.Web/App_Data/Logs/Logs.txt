@@ -1,0 +1,76 @@
+﻿DEBUG 2016-09-27 12:52:32,204 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-09-27 12:52:32,229 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2016-09-27 12:52:32,243 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.Web.AbpZeroTemplateWebModule, MyCompanyName.AbpZeroTemplate.Web, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,246 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,246 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,248 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,255 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,258 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.AbpZeroTemplateDataModule, MyCompanyName.AbpZeroTemplate.EntityFramework, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,259 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,259 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,260 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,260 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.AbpZeroTemplateCoreModule, MyCompanyName.AbpZeroTemplate.Core, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,260 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,260 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,261 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.AbpZeroTemplateApplicationModule, MyCompanyName.AbpZeroTemplate.Application, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,261 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.WebApi.AbpZeroTemplateWebApiModule, MyCompanyName.AbpZeroTemplate.WebApi, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,261 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,261 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.OData.AbpWebApiODataModule, Abp.Web.Api.OData, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,262 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,262 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,262 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-09-27 12:52:32,272 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+FATAL 2016-09-27 12:52:33,132 [1    ] Abp.AbpBootstrapper                      - System.IO.FileLoadException: 未能加载文件或程序集“System.Web.OData, Version=5.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”或它的某一个依赖项。找到的程序集清单定义与程序集引用不匹配。 (异常来自 HRESULT:0x80131040)
+文件名:“System.Web.OData, Version=5.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”
+   在 Abp.WebApi.OData.AbpWebApiODataModule.PreInitialize()
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__16_0(AbpModuleInfo module) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:行号 47
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:行号 47
+   在 Abp.AbpBootstrapper.Initialize() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:行号 132
+
+=== 预绑定状态信息 ===
+日志: DisplayName = System.Web.OData, Version=5.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+ (Fully-specified)
+日志: Appbase = file:///E:/SkyNote/github/AbpZero/src/MyCompanyName.AbpZeroTemplate.Web/
+日志: 初始 PrivatePath = E:\SkyNote\github\AbpZero\src\MyCompanyName.AbpZeroTemplate.Web\bin
+调用程序集: Abp.Web.Api.OData, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: E:\SkyNote\github\AbpZero\src\MyCompanyName.AbpZeroTemplate.Web\web.config
+日志: 使用主机配置文件: C:\Users\SkyNote\Documents\IISExpress\config\aspnet.config
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 在应用程序配置文件中找到重定向: 5.9.1.0 已重定向到 5.9.1.0。
+日志: 策略后引用: System.Web.OData, Version=5.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+日志: 尝试下载新的 URL file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Temporary ASP.NET Files/root/88d66c07/d3d0e563/System.Web.OData.DLL。
+日志: 尝试下载新的 URL file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Temporary ASP.NET Files/root/88d66c07/d3d0e563/System.Web.OData/System.Web.OData.DLL。
+日志: 尝试下载新的 URL file:///E:/SkyNote/github/AbpZero/src/MyCompanyName.AbpZeroTemplate.Web/bin/System.Web.OData.DLL。
+警告: 比较程序集名称时发生不匹配: 主版本
+错误: 未能完成程序集的安装(hr = 0x80131040)。探测终止。
+
+System.IO.FileLoadException: 未能加载文件或程序集“System.Web.OData, Version=5.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”或它的某一个依赖项。找到的程序集清单定义与程序集引用不匹配。 (异常来自 HRESULT:0x80131040)
+文件名:“System.Web.OData, Version=5.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”
+   在 Abp.WebApi.OData.AbpWebApiODataModule.PreInitialize()
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__16_0(AbpModuleInfo module) 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:行号 47
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:行号 47
+   在 Abp.AbpBootstrapper.Initialize() 位置 D:\Halil\GitHub\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:行号 132
+
+=== 预绑定状态信息 ===
+日志: DisplayName = System.Web.OData, Version=5.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+ (Fully-specified)
+日志: Appbase = file:///E:/SkyNote/github/AbpZero/src/MyCompanyName.AbpZeroTemplate.Web/
+日志: 初始 PrivatePath = E:\SkyNote\github\AbpZero\src\MyCompanyName.AbpZeroTemplate.Web\bin
+调用程序集: Abp.Web.Api.OData, Version=0.13.0.0, Culture=neutral, PublicKeyToken=null。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: E:\SkyNote\github\AbpZero\src\MyCompanyName.AbpZeroTemplate.Web\web.config
+日志: 使用主机配置文件: C:\Users\SkyNote\Documents\IISExpress\config\aspnet.config
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 在应用程序配置文件中找到重定向: 5.9.1.0 已重定向到 5.9.1.0。
+日志: 策略后引用: System.Web.OData, Version=5.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+日志: 尝试下载新的 URL file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Temporary ASP.NET Files/root/88d66c07/d3d0e563/System.Web.OData.DLL。
+日志: 尝试下载新的 URL file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Temporary ASP.NET Files/root/88d66c07/d3d0e563/System.Web.OData/System.Web.OData.DLL。
+日志: 尝试下载新的 URL file:///E:/SkyNote/github/AbpZero/src/MyCompanyName.AbpZeroTemplate.Web/bin/System.Web.OData.DLL。
+警告: 比较程序集名称时发生不匹配: 主版本
+错误: 未能完成程序集的安装(hr = 0x80131040)。探测终止。
+

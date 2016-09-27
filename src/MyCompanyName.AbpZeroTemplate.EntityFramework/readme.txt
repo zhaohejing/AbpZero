@@ -1,0 +1,2 @@
+add-migration AbpZeroTemplate
+update-database

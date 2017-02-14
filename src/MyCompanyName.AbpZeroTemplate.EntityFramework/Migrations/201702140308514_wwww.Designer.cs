@@ -7,13 +7,13 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Added_AuthenticationSource_To_User : IMigrationMetadata
+    public sealed partial class wwww : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Added_AuthenticationSource_To_User));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(wwww));
         
         string IMigrationMetadata.Id
         {
-            get { return "201506061210411_Added_AuthenticationSource_To_User"; }
+            get { return "201702140308514_wwww"; }
         }
         
         string IMigrationMetadata.Source

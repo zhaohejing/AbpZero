@@ -62,7 +62,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
             _userRoleRepository = userRoleRepository;
         }
 
-        public async Task<PagedResultOutput<UserListDto>> GetUsers(GetUsersInput input)
+        public async Task<PagedResultDto<UserListDto>> GetUsers(GetUsersInput input)
         {
             var query = UserManager.Users
                 .Include(u => u.Roles)
@@ -78,7 +78,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
 
             if (!input.Permission.IsNullOrWhiteSpace())
             {
-                var isFilterPermissionGrantedByDefault = PermissionManager.GetPermission(input.Permission).IsGrantedByDefault;
+                var isFilterPermissionGrantedByDefault =await PermissionChecker.IsGrantedAsync(input.Permission);
                 query = (from user in query
                          join ur in _userRoleRepository.GetAll() on user.Id equals ur.UserId into urJoined
                          from ur in urJoined.DefaultIfEmpty()
@@ -109,7 +109,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
             var userListDtos = users.MapTo<List<UserListDto>>();
             await FillRoleNames(userListDtos);
 
-            return new PagedResultOutput<UserListDto>(
+            return new PagedResultDto<UserListDto>(
                 userCount,
                 userListDtos
                 );
@@ -125,7 +125,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
         }
 
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_Create, AppPermissions.Pages_Administration_Users_Edit)]
-        public async Task<GetUserForEditOutput> GetUserForEdit(NullableIdInput<long> input)
+        public async Task<GetUserForEditOutput> GetUserForEdit(NullableIdDto<long> input)
         {
             //Getting all available roles
             var userRoleDtos = (await _roleManager.Roles
@@ -175,9 +175,9 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
         }
 
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_ChangePermissions)]
-        public async Task<GetUserPermissionsForEditOutput> GetUserPermissionsForEdit(IdInput<long> input)
+        public async Task<GetUserPermissionsForEditOutput> GetUserPermissionsForEdit(NullableIdDto<long> input)
         {
-            var user = await UserManager.GetUserByIdAsync(input.Id);
+            var user = await UserManager.GetUserByIdAsync(input.Id.Value);
             var permissions = PermissionManager.GetAllPermissions();
             var grantedPermissions = await UserManager.GetGrantedPermissionsAsync(user);
 
@@ -189,9 +189,9 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
         }
 
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_ChangePermissions)]
-        public async Task ResetUserSpecificPermissions(IdInput<long> input)
+        public async Task ResetUserSpecificPermissions(NullableIdDto<long> input)
         {
-            var user = await UserManager.GetUserByIdAsync(input.Id);
+            var user = await UserManager.GetUserByIdAsync(input.Id.Value);
             await UserManager.ResetAllPermissionsAsync(user);
         }
 
@@ -216,14 +216,14 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
         }
 
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_Delete)]
-        public async Task DeleteUser(IdInput<long> input)
+        public async Task DeleteUser(NullableIdDto<long> input)
         {
             if (input.Id == AbpSession.GetUserId())
             {
                 throw new UserFriendlyException(L("YouCanNotDeleteOwnAccount"));
             }
 
-            var user = await UserManager.GetUserByIdAsync(input.Id);
+            var user = await UserManager.GetUserByIdAsync(input.Id.Value);
             CheckErrors(await UserManager.DeleteAsync(user));
         }
 

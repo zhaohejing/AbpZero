@@ -11,6 +11,7 @@ using MyCompanyName.AbpZeroTemplate.Authorization.Roles;
 using MyCompanyName.AbpZeroTemplate.Authorization.Users;
 using MyCompanyName.AbpZeroTemplate.MultiTenancy;
 using MyCompanyName.AbpZeroTemplate.WebApi.Models;
+using AbpCompanyName.AbpProjectName.Authorization;
 
 namespace MyCompanyName.AbpZeroTemplate.WebApi.Controllers
 {
@@ -18,7 +19,7 @@ namespace MyCompanyName.AbpZeroTemplate.WebApi.Controllers
     {
         public static OAuthBearerAuthenticationOptions OAuthBearerOptions { get; private set; }
 
-        private readonly UserManager _userManager;
+        private readonly LogInManager _logInManager;
         private readonly AbpLoginResultTypeHelper _abpLoginResultTypeHelper;
 
         static AccountController()
@@ -27,10 +28,10 @@ namespace MyCompanyName.AbpZeroTemplate.WebApi.Controllers
         }
 
         public AccountController(
-            UserManager userManager, 
+            LogInManager logInManager, 
             AbpLoginResultTypeHelper abpLoginResultTypeHelper)
         {
-            _userManager = userManager;
+            _logInManager = logInManager;
             _abpLoginResultTypeHelper = abpLoginResultTypeHelper;
         }
 
@@ -52,9 +53,9 @@ namespace MyCompanyName.AbpZeroTemplate.WebApi.Controllers
             return new AjaxResponse(OAuthBearerOptions.AccessTokenFormat.Protect(ticket));
         }
 
-        private async Task<AbpUserManager<Tenant, Role, User>.AbpLoginResult> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
+        private async Task<AbpLoginResult<Tenant, User>> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
         {
-            var loginResult = await _userManager.LoginAsync(usernameOrEmailAddress, password, tenancyName);
+            var loginResult = await _logInManager.LoginAsync(usernameOrEmailAddress, password, tenancyName);
 
             switch (loginResult.Result)
             {

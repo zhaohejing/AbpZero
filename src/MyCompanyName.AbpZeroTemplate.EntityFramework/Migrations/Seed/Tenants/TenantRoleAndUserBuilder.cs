@@ -44,8 +44,7 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations.Seed.Tenants
 
                 foreach (var permission in permissions)
                 {
-                    if (!permission.IsGrantedByDefault)
-                    {
+                  
                         _context.Permissions.Add(
                             new RolePermissionSetting
                             {
@@ -54,7 +53,6 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations.Seed.Tenants
                                 IsGranted = true,
                                 RoleId = adminRole.Id
                             });
-                    }
                 }
 
                 _context.SaveChanges();

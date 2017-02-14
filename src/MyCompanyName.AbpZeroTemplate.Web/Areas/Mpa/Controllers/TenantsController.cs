@@ -58,7 +58,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
         [AbpMvcAuthorize(AppPermissions.Pages_Tenants_Edit)]
         public async Task<PartialViewResult> EditModal(int id)
         {
-            var tenantEditDto = await _tenantAppService.GetTenantForEdit(new EntityRequestInput(id));
+            var tenantEditDto = await _tenantAppService.GetTenantForEdit(new NullableIdDto(id));
             var editionItems = await _editionAppService.GetEditionComboboxItems(tenantEditDto.EditionId);
             var viewModel = new EditTenantViewModel(tenantEditDto, editionItems);
 
@@ -69,7 +69,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
         public async Task<PartialViewResult> FeaturesModal(int id)
         {
             var tenant = await _tenantManager.GetByIdAsync(id);
-            var output = await _tenantAppService.GetTenantFeaturesForEdit(new EntityRequestInput(id));
+            var output = await _tenantAppService.GetTenantFeaturesForEdit(new NullableIdDto(id));
             var viewModel = new TenantFeaturesEditViewModel(tenant, output);
 
             return PartialView("_FeaturesModal", viewModel);

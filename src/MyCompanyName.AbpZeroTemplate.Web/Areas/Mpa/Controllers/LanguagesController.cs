@@ -44,7 +44,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
         [AbpMvcAuthorize(AppPermissions.Pages_Administration_Languages_Create, AppPermissions.Pages_Administration_Languages_Edit)]
         public async Task<PartialViewResult> CreateOrEditModal(int? id)
         {
-            var output = await _languageAppService.GetLanguageForEdit(new NullableIdInput { Id = id });
+            var output = await _languageAppService.GetLanguageForEdit(new NullableIdDto { Id = id });
             var viewModel = new CreateOrEditLanguageModalViewModel(output);
 
             return PartialView("_CreateOrEditModal", viewModel);
@@ -66,7 +66,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
 
             if (baseLanguageName.IsNullOrEmpty())
             {
-                baseLanguageName = LocalizationManager.CurrentLanguage.Name;
+                baseLanguageName = _languageManager.CurrentLanguage.Name;
             }
 
             //Create view model
@@ -74,7 +74,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
             
             viewModel.LanguageName = languageName;
 
-            viewModel.Languages = LocalizationManager.GetAllLanguages().ToList();
+            viewModel.Languages = _languageManager.GetLanguages().ToList();
 
             viewModel.Sources = LocalizationManager
                 .GetAllSources()

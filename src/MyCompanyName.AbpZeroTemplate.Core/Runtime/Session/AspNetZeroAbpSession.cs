@@ -1,4 +1,6 @@
 ﻿using Abp.Configuration.Startup;
+using Abp.MultiTenancy;
+using Abp.Runtime;
 using Abp.Runtime.Session;
 using MyCompanyName.AbpZeroTemplate.MultiTenancy;
 
@@ -24,9 +26,10 @@ namespace MyCompanyName.AbpZeroTemplate.Runtime.Session
                 return TenantIdAccessor?.GetCurrentTenantIdOrNull(false); //set false to prevent circular usage.
             }
         }
-
-        public AspNetZeroAbpSession(IMultiTenancyConfig multiTenancy) 
-            : base(multiTenancy)
+      
+        public AspNetZeroAbpSession(IPrincipalAccessor principalAccessor, IMultiTenancyConfig multiTenancy, 
+            ITenantResolver tenantResolver, IAmbientScopeProvider<SessionOverride> sessionOverrideScopeProvider) 
+            : base(principalAccessor,multiTenancy,tenantResolver,sessionOverrideScopeProvider)
         {
 
         }

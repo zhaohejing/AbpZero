@@ -8,7 +8,7 @@ namespace MyCompanyName.AbpZeroTemplate.Timing
 {
     public interface ITimingAppService : IApplicationService
     {
-        Task<ListResultOutput<NameValueDto>> GetTimezones(GetTimezonesInput input);
+        Task<ListResultDto<NameValueDto>> GetTimezones(GetTimezonesInput input);
 
         Task<List<ComboboxItemDto>> GetTimezoneComboboxItems(GetTimezoneComboboxItemsInput input);
     }

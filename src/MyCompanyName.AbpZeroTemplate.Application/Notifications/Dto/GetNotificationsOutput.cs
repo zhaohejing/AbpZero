@@ -4,7 +4,7 @@ using Abp.Notifications;
 
 namespace MyCompanyName.AbpZeroTemplate.Notifications.Dto
 {
-    public class GetNotificationsOutput : PagedResultOutput<UserNotification>
+    public class GetNotificationsOutput : PagedResultDto<UserNotification>
     {
         public int UnreadCount { get; set; }
 

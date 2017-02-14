@@ -46,7 +46,7 @@ namespace MyCompanyName.AbpZeroTemplate.Localization
         }
 
         [AbpAuthorize(AppPermissions.Pages_Administration_Languages_Create, AppPermissions.Pages_Administration_Languages_Edit)]
-        public async Task<GetLanguageForEditOutput> GetLanguageForEdit(NullableIdInput input)
+        public async Task<GetLanguageForEditOutput> GetLanguageForEdit(NullableIdDto input)
         {
             ApplicationLanguage language = null;
             if (input.Id.HasValue)
@@ -90,9 +90,9 @@ namespace MyCompanyName.AbpZeroTemplate.Localization
             }
         }
 
-        public async Task DeleteLanguage(IdInput input)
+        public async Task DeleteLanguage(NullableIdDto input)
         {
-            var language = await _languageRepository.GetAsync(input.Id);
+            var language = await _languageRepository.GetAsync(input.Id.Value);
             await _applicationLanguageManager.RemoveAsync(AbpSession.TenantId, language.Name);
         }
 
@@ -105,7 +105,7 @@ namespace MyCompanyName.AbpZeroTemplate.Localization
         }
 
         [AbpAuthorize(AppPermissions.Pages_Administration_Languages_ChangeTexts)]
-        public async Task<PagedResultOutput<LanguageTextListDto>> GetLanguageTexts(GetLanguageTextsInput input)
+        public async Task<PagedResultDto<LanguageTextListDto>> GetLanguageTexts(GetLanguageTextsInput input)
         {
             /* Note: This method is used by SPA without paging, MPA with paging.
              * So, it can both usable with paging or not */
@@ -174,7 +174,7 @@ namespace MyCompanyName.AbpZeroTemplate.Localization
                 languageTexts = languageTexts.Take(input.MaxResultCount);
             }
 
-            return new PagedResultOutput<LanguageTextListDto>(
+            return new PagedResultDto<LanguageTextListDto>(
                 totalCount,
                 languageTexts.ToList()
                 );

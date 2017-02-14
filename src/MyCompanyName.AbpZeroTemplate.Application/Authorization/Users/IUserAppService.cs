@@ -8,20 +8,20 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
 {
     public interface IUserAppService : IApplicationService
     {
-        Task<PagedResultOutput<UserListDto>> GetUsers(GetUsersInput input);
+        Task<PagedResultDto<UserListDto>> GetUsers(GetUsersInput input);
 
         Task<FileDto> GetUsersToExcel();
 
-        Task<GetUserForEditOutput> GetUserForEdit(NullableIdInput<long> input);
+        Task<GetUserForEditOutput> GetUserForEdit(NullableIdDto<long> input);
 
-        Task<GetUserPermissionsForEditOutput> GetUserPermissionsForEdit(IdInput<long> input);
+        Task<GetUserPermissionsForEditOutput> GetUserPermissionsForEdit(NullableIdDto<long> input);
 
-        Task ResetUserSpecificPermissions(IdInput<long> input);
+        Task ResetUserSpecificPermissions(NullableIdDto<long> input);
 
         Task UpdateUserPermissions(UpdateUserPermissionsInput input);
 
         Task CreateOrUpdateUser(CreateOrUpdateUserInput input);
 
-        Task DeleteUser(IdInput<long> input);
+        Task DeleteUser(NullableIdDto<long> input);
     }
 }

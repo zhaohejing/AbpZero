@@ -12,7 +12,7 @@ namespace MyCompanyName.AbpZeroTemplate.Notifications
 
         Task SetAllNotificationsAsRead();
 
-        Task SetNotificationAsRead(IdInput<Guid> input);
+        Task SetNotificationAsRead(NullableIdDto<Guid> input);
 
         Task<GetNotificationSettingsOutput> GetNotificationSettings();
         

@@ -26,6 +26,7 @@ using MyCompanyName.AbpZeroTemplate.MultiTenancy;
 using MyCompanyName.AbpZeroTemplate.Notifications;
 using Newtonsoft.Json;
 using MyCompanyName.AbpZeroTemplate.Security;
+using AbpCompanyName.AbpProjectName.Authorization;
 
 namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
 {
@@ -33,6 +34,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
     {
         private readonly IMultiTenancyConfig _multiTenancyConfig;
         private readonly TenantManager _tenantManager;
+        private readonly LogInManager _loginManager;
         private readonly UserManager _userManager;
         private readonly EditionManager _editionManager;
         private readonly IAppNotifier _appNotifier;
@@ -49,6 +51,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
         public TenantRegistrationController(
             IMultiTenancyConfig multiTenancyConfig,
             TenantManager tenantManager,
+            LogInManager loginManager,
             EditionManager editionManager,
             IAppNotifier appNotifier,
             UserManager userManager,
@@ -59,6 +62,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
             _editionManager = editionManager;
             _appNotifier = appNotifier;
             _userManager = userManager;
+            _loginManager = loginManager;
             _abpLoginResultTypeHelper = abpLoginResultTypeHelper;
         }
 
@@ -188,9 +192,9 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
             return SettingManager.GetSettingValueForApplication<bool>(AppSettings.TenantManagement.UseCaptchaOnRegistration);
         }
 
-        private async Task<AbpUserManager<Tenant, Role, User>.AbpLoginResult> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
+        private async Task<AbpLoginResult< Tenant, User>> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
         {
-            var loginResult = await _userManager.LoginAsync(usernameOrEmailAddress, password, tenancyName);
+            var loginResult = await _loginManager.LoginAsync(usernameOrEmailAddress, password, tenancyName);
 
             switch (loginResult.Result)
             {

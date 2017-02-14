@@ -7,6 +7,6 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
 {
     public interface IUserLoginAppService : IApplicationService
     {
-        Task<ListResultOutput<UserLoginAttemptDto>> GetRecentUserLoginAttempts();
+        Task<ListResultDto<UserLoginAttemptDto>> GetRecentUserLoginAttempts();
     }
 }

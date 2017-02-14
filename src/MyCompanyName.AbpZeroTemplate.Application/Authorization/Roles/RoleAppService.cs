@@ -27,12 +27,12 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Roles
             _roleManager = roleManager;
         }
 
-        public async Task<ListResultOutput<RoleListDto>> GetRoles(GetRolesInput input)
+        public async Task<ListResultDto<RoleListDto>> GetRoles(GetRolesInput input)
         {
             var isFilterPermissionGrantedByDefault = false;
             if (!input.Permission.IsNullOrWhiteSpace())
             {
-                isFilterPermissionGrantedByDefault = PermissionManager.GetPermission(input.Permission).IsGrantedByDefault;
+                isFilterPermissionGrantedByDefault =await PermissionChecker.IsGrantedAsync(input.Permission);
             }
 
             var roles = await _roleManager.Roles
@@ -42,11 +42,11 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Roles
                                            )
                                           .ToListAsync();
 
-            return new ListResultOutput<RoleListDto>(roles.MapTo<List<RoleListDto>>());
+            return new ListResultDto<RoleListDto>(roles.MapTo<List<RoleListDto>>());
         }
 
         [AbpAuthorize(AppPermissions.Pages_Administration_Roles_Create, AppPermissions.Pages_Administration_Roles_Edit)]
-        public async Task<GetRoleForEditOutput> GetRoleForEdit(NullableIdInput input)
+        public async Task<GetRoleForEditOutput> GetRoleForEdit(NullableIdDto input)
         {
             var permissions = PermissionManager.GetAllPermissions();
             var grantedPermissions = new Permission[0];
@@ -84,9 +84,12 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Roles
         }
 
         [AbpAuthorize(AppPermissions.Pages_Administration_Roles_Delete)]
-        public async Task DeleteRole(EntityRequestInput input)
+        public async Task DeleteRole(NullableIdDto input)
         {
-            var role = await _roleManager.GetRoleByIdAsync(input.Id);
+            if (!input.Id.HasValue) {
+
+            }
+            var role = await _roleManager.GetRoleByIdAsync((int)input.Id);
             CheckErrors(await _roleManager.DeleteAsync(role));
         }
 

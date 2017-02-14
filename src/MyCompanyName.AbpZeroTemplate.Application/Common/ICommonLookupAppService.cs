@@ -7,9 +7,9 @@ namespace MyCompanyName.AbpZeroTemplate.Common
 {
     public interface ICommonLookupAppService : IApplicationService
     {
-        Task<ListResultOutput<ComboboxItemDto>> GetEditionsForCombobox();
+        Task<ListResultDto<ComboboxItemDto>> GetEditionsForCombobox();
 
-        Task<PagedResultOutput<NameValueDto>> FindUsers(FindUsersInput input);
+        Task<PagedResultDto<NameValueDto>> FindUsers(FindUsersInput input);
 
         string GetDefaultEditionName();
     }

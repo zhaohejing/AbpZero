@@ -11,12 +11,13 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
     public class UserStore : AbpUserStore<Role, User>
     {
         public UserStore(
-            IRepository<User, long> userRepository,
-            IRepository<UserLogin, long> userLoginRepository,
-            IRepository<UserRole, long> userRoleRepository,
-            IRepository<Role> roleRepository,
-            IRepository<UserPermissionSetting, long> userPermissionSettingRepository,
-            IUnitOfWorkManager unitOfWorkManager
+           IRepository<User, long> userRepository,
+           IRepository<UserLogin, long> userLoginRepository, 
+           IRepository<UserRole, long> userRoleRepository,
+           IRepository<Role> roleRepository,
+           IRepository<UserPermissionSetting, long> userPermissionSettingRepository,
+           IUnitOfWorkManager unitOfWorkManager,
+           IRepository<UserClaim, long> userClaimRepository
             )
             : base(
                 userRepository,
@@ -24,7 +25,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
                 userRoleRepository,
                 roleRepository,
                 userPermissionSettingRepository,
-                unitOfWorkManager
+                unitOfWorkManager, userClaimRepository
             )
         {
         }

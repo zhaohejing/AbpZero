@@ -8,7 +8,7 @@ namespace MyCompanyName.AbpZeroTemplate.Auditing
 {
     public interface IAuditLogAppService : IApplicationService
     {
-        Task<PagedResultOutput<AuditLogListDto>> GetAuditLogs(GetAuditLogsInput input);
+        Task<PagedResultDto<AuditLogListDto>> GetAuditLogs(GetAuditLogsInput input);
 
         Task<FileDto> GetAuditLogsToExcel(GetAuditLogsInput input);
     }

@@ -9,7 +9,7 @@ using MyCompanyName.AbpZeroTemplate.MultiTenancy;
 
 namespace MyCompanyName.AbpZeroTemplate.Editions
 {
-    public class FeatureValueStore : AbpFeatureValueStore<Tenant, Role, User>
+    public class FeatureValueStore : AbpFeatureValueStore<Tenant, User>
     {
         public FeatureValueStore(
             ICacheManager cacheManager,

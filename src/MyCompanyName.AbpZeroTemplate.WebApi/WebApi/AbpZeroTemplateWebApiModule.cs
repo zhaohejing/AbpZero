@@ -28,7 +28,7 @@ namespace MyCompanyName.AbpZeroTemplate.WebApi
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
 
             //Automatically creates Web API controllers for all application services of the application
-            DynamicApiControllerBuilder
+            Configuration.Modules.AbpWebApi().DynamicApiControllerBuilder
                 .ForAll<IApplicationService>(typeof(AbpZeroTemplateApplicationModule).Assembly, "app")
                 .Build();
 

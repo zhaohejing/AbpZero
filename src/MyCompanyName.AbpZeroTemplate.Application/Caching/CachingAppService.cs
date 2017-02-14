@@ -18,7 +18,7 @@ namespace MyCompanyName.AbpZeroTemplate.Caching
             _cacheManager = cacheManager;
         }
 
-        public ListResultOutput<CacheDto> GetAllCaches()
+        public ListResultDto<CacheDto> GetAllCaches()
         {
             var caches = _cacheManager.GetAllCaches()
                                         .Select(cache => new CacheDto
@@ -27,12 +27,12 @@ namespace MyCompanyName.AbpZeroTemplate.Caching
                                         })
                                         .ToList();
 
-            return new ListResultOutput<CacheDto>(caches);
+            return new ListResultDto<CacheDto>(caches);
         }
 
-        public async Task ClearCache(IdInput<string> input)
+        public async Task ClearCache(string input)
         {
-            var cache = _cacheManager.GetCache(input.Id);
+            var cache = _cacheManager.GetCache(input);
             await cache.ClearAsync();
         }
 

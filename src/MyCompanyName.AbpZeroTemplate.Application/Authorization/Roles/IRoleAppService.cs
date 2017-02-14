@@ -10,12 +10,12 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Roles
     /// </summary>
     public interface IRoleAppService : IApplicationService
     {
-        Task<ListResultOutput<RoleListDto>> GetRoles(GetRolesInput input);
+        Task<ListResultDto<RoleListDto>> GetRoles(GetRolesInput input);
 
-        Task<GetRoleForEditOutput> GetRoleForEdit(NullableIdInput input);
+        Task<GetRoleForEditOutput> GetRoleForEdit(NullableIdDto input);
 
         Task CreateOrUpdateRole(CreateOrUpdateRoleInput input);
 
-        Task DeleteRole(EntityRequestInput input);
+        Task DeleteRole(NullableIdDto input);
     }
 }

@@ -6,6 +6,6 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Permissions
 {
     public interface IPermissionAppService : IApplicationService
     {
-        ListResultOutput<FlatPermissionWithLevelDto> GetAllPermissions();
+        ListResultDto<FlatPermissionWithLevelDto> GetAllPermissions();
     }
 }

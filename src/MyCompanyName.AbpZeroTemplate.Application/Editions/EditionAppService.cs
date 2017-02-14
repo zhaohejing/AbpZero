@@ -23,16 +23,16 @@ namespace MyCompanyName.AbpZeroTemplate.Editions
             _editionManager = editionManager;
         }
 
-        public async Task<ListResultOutput<EditionListDto>> GetEditions()
+        public async Task<ListResultDto<EditionListDto>> GetEditions()
         {
             var editions = await _editionManager.Editions.ToListAsync();
-            return new ListResultOutput<EditionListDto>(
+            return new ListResultDto<EditionListDto>(
                 editions.MapTo<List<EditionListDto>>()
                 );
         }
 
         [AbpAuthorize(AppPermissions.Pages_Editions_Create, AppPermissions.Pages_Editions_Edit)]
-        public async Task<GetEditionForEditOutput> GetEditionForEdit(NullableIdInput input)
+        public async Task<GetEditionForEditOutput> GetEditionForEdit(NullableIdDto input)
         {
             var features = FeatureManager.GetAll();
 
@@ -73,16 +73,16 @@ namespace MyCompanyName.AbpZeroTemplate.Editions
         }
 
         [AbpAuthorize(AppPermissions.Pages_Editions_Delete)]
-        public async Task DeleteEdition(EntityRequestInput input)
+        public async Task DeleteEdition(NullableIdDto input)
         {
-            var edition = await _editionManager.GetByIdAsync(input.Id);
+            var edition = await _editionManager.GetByIdAsync(input.Id.Value);
             await _editionManager.DeleteAsync(edition);
         }
 
         public async Task<List<ComboboxItemDto>> GetEditionComboboxItems(int? selectedEditionId = null)
         {
             var editions = await _editionManager.Editions.ToListAsync();
-            var editionItems = new ListResultOutput<ComboboxItemDto>(editions.Select(e => new ComboboxItemDto(e.Id.ToString(), e.DisplayName)).ToList()).Items.ToList();
+            var editionItems = new ListResultDto<ComboboxItemDto>(editions.Select(e => new ComboboxItemDto(e.Id.ToString(), e.DisplayName)).ToList()).Items.ToList();
 
             var defaultItem = new ComboboxItemDto("null", L("NotAssigned"));
             editionItems.Insert(0, defaultItem);

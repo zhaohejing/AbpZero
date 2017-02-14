@@ -7,9 +7,9 @@ namespace MyCompanyName.AbpZeroTemplate.Caching
 {
     public interface ICachingAppService : IApplicationService
     {
-        ListResultOutput<CacheDto> GetAllCaches();
+        ListResultDto<CacheDto> GetAllCaches();
 
-        Task ClearCache(IdInput<string> input);
+        Task ClearCache(string input);
 
         Task ClearAllCaches();
     }

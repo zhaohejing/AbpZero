@@ -7,9 +7,9 @@ namespace MyCompanyName.AbpZeroTemplate.Organizations
 {
     public interface IOrganizationUnitAppService : IApplicationService
     {
-        Task<ListResultOutput<OrganizationUnitDto>> GetOrganizationUnits();
+        Task<ListResultDto<OrganizationUnitDto>> GetOrganizationUnits();
 
-        Task<PagedResultOutput<OrganizationUnitUserListDto>> GetOrganizationUnitUsers(GetOrganizationUnitUsersInput input);
+        Task<PagedResultDto<OrganizationUnitUserListDto>> GetOrganizationUnitUsers(GetOrganizationUnitUsersInput input);
 
         Task<OrganizationUnitDto> CreateOrganizationUnit(CreateOrganizationUnitInput input);
 
@@ -17,7 +17,7 @@ namespace MyCompanyName.AbpZeroTemplate.Organizations
 
         Task<OrganizationUnitDto> MoveOrganizationUnit(MoveOrganizationUnitInput input);
 
-        Task DeleteOrganizationUnit(IdInput<long> input);
+        Task DeleteOrganizationUnit(NullableIdDto<long> input);
 
         Task AddUserToOrganizationUnit(UserToOrganizationUnitInput input);
         

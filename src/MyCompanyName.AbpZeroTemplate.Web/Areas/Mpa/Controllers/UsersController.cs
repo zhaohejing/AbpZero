@@ -67,7 +67,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
         [AbpMvcAuthorize(AppPermissions.Pages_Administration_Users_Create, AppPermissions.Pages_Administration_Users_Edit)]
         public async Task<PartialViewResult> CreateOrEditModal(long? id)
         {
-            var output = await _userAppService.GetUserForEdit(new NullableIdInput<long> { Id = id });
+            var output = await _userAppService.GetUserForEdit(new NullableIdDto<long> { Id = id });
             var viewModel = new CreateOrEditUserModalViewModel(output);
 
             return PartialView("_CreateOrEditModal", viewModel);
@@ -77,7 +77,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
         public async Task<PartialViewResult> PermissionsModal(long id)
         {
             var user = await _userManager.GetUserByIdAsync(id);
-            var output = await _userAppService.GetUserPermissionsForEdit(new IdInput<long>(id));
+            var output = await _userAppService.GetUserPermissionsForEdit(new NullableIdDto<long>(id));
             var viewModel = new UserPermissionsEditViewModel(output, user);
 
             return PartialView("_PermissionsModal", viewModel);

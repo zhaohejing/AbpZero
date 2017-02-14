@@ -54,7 +54,7 @@ namespace MyCompanyName.AbpZeroTemplate.Chat
             };
         }
 
-        public async Task<ListResultOutput<ChatMessageDto>> GetUserChatMessages(GetUserChatMessagesInput input)
+        public async Task<ListResultDto<ChatMessageDto>> GetUserChatMessages(GetUserChatMessagesInput input)
         {
             var userId = AbpSession.GetUserId();
             var messages = await _chatMessageRepository.GetAll()
@@ -66,7 +66,7 @@ namespace MyCompanyName.AbpZeroTemplate.Chat
 
             messages.Reverse();
 
-            return new ListResultOutput<ChatMessageDto>(messages.MapTo<List<ChatMessageDto>>());
+            return new ListResultDto<ChatMessageDto>(messages.MapTo<List<ChatMessageDto>>());
         }
 
         public async Task MarkAllUnreadMessagesOfUserAsRead(MarkAllUnreadMessagesOfUserAsReadInput input)

@@ -67,8 +67,7 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations.Seed.Host
 
                 foreach (var permission in permissions)
                 {
-                    if (!permission.IsGrantedByDefault)
-                    {
+                  
                         _context.Permissions.Add(
                             new RolePermissionSetting
                             {
@@ -77,7 +76,6 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations.Seed.Host
                                 IsGranted = true,
                                 RoleId = adminRoleForHost.Id
                             });
-                    }
                 }
 
                 _context.SaveChanges();

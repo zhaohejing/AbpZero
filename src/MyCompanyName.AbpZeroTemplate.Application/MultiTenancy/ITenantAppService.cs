@@ -7,20 +7,20 @@ namespace MyCompanyName.AbpZeroTemplate.MultiTenancy
 {
     public interface ITenantAppService : IApplicationService
     {
-        Task<PagedResultOutput<TenantListDto>> GetTenants(GetTenantsInput input);
+        Task<PagedResultDto<TenantListDto>> GetTenants(GetTenantsInput input);
 
         Task CreateTenant(CreateTenantInput input);
 
-        Task<TenantEditDto> GetTenantForEdit(EntityRequestInput input);
+        Task<TenantEditDto> GetTenantForEdit(NullableIdDto input);
 
         Task UpdateTenant(TenantEditDto input);
 
-        Task DeleteTenant(EntityRequestInput input);
+        Task DeleteTenant(NullableIdDto input);
 
-        Task<GetTenantFeaturesForEditOutput> GetTenantFeaturesForEdit(EntityRequestInput input);
+        Task<GetTenantFeaturesForEditOutput> GetTenantFeaturesForEdit(NullableIdDto input);
 
         Task UpdateTenantFeatures(UpdateTenantFeaturesInput input);
 
-        Task ResetTenantSpecificFeatures(EntityRequestInput input);
+        Task ResetTenantSpecificFeatures(NullableIdDto input);
     }
 }

@@ -17,16 +17,16 @@ namespace MyCompanyName.AbpZeroTemplate.Timing
             _timeZoneService = timeZoneService;
         }
 
-        public async Task<ListResultOutput<NameValueDto>> GetTimezones(GetTimezonesInput input)
+        public async Task<ListResultDto<NameValueDto>> GetTimezones(GetTimezonesInput input)
         {
             var timeZones = await GetTimezoneInfos(input.DefaultTimezoneScope);
-            return new ListResultOutput<NameValueDto>(timeZones);
+            return new ListResultDto<NameValueDto>(timeZones);
         }
 
         public async Task<List<ComboboxItemDto>> GetTimezoneComboboxItems(GetTimezoneComboboxItemsInput input)
         {
             var timeZones = await GetTimezoneInfos(input.DefaultTimezoneScope);
-            var timeZoneItems = new ListResultOutput<ComboboxItemDto>(timeZones.Select(e => new ComboboxItemDto(e.Value, e.Name)).ToList()).Items.ToList();
+            var timeZoneItems = new ListResultDto<ComboboxItemDto>(timeZones.Select(e => new ComboboxItemDto(e.Value, e.Name)).ToList()).Items.ToList();
 
             if (!string.IsNullOrEmpty(input.SelectedTimezoneId))
             {

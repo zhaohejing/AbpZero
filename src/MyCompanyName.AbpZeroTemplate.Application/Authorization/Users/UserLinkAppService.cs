@@ -14,6 +14,8 @@ using Abp.Runtime.Session;
 using Abp.UI;
 using MyCompanyName.AbpZeroTemplate.Authorization.Users.Dto;
 using MyCompanyName.AbpZeroTemplate.MultiTenancy;
+using MyCompanyName.AbpZeroTemplate.Authorization.Users;
+using AbpCompanyName.AbpProjectName.Authorization;
 
 namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
 {
@@ -21,6 +23,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
     public class UserLinkAppService : AbpZeroTemplateAppServiceBase, IUserLinkAppService
     {
         private readonly AbpLoginResultTypeHelper _abpLoginResultTypeHelper;
+        private readonly LogInManager _loginManager;
         private readonly IUserLinkManager _userLinkManager;
         private readonly IRepository<Tenant> _tenantRepository;
         private readonly IRepository<UserAccount, long> _userAccountRepository;
@@ -29,17 +32,18 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
             AbpLoginResultTypeHelper abpLoginResultTypeHelper,
             IUserLinkManager userLinkManager,
             IRepository<Tenant> tenantRepository,
-            IRepository<UserAccount, long> userAccountRepository)
+            IRepository<UserAccount, long> userAccountRepository, LogInManager loginManager)
         {
             _abpLoginResultTypeHelper = abpLoginResultTypeHelper;
             _userLinkManager = userLinkManager;
             _tenantRepository = tenantRepository;
+            _loginManager = loginManager;
             _userAccountRepository = userAccountRepository;
         }
 
         public async Task LinkToUser(LinkToUserInput input)
         {
-            var loginResult = await UserManager.LoginAsync(input.UsernameOrEmailAddress, input.Password, input.TenancyName);
+            var loginResult = await _loginManager.LoginAsync(input.UsernameOrEmailAddress, input.Password, input.TenancyName);
 
             if (loginResult.Result != AbpLoginResultType.Success)
             {
@@ -59,12 +63,12 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
             await _userLinkManager.Link(GetCurrentUser(), loginResult.User);
         }
 
-        public async Task<PagedResultOutput<LinkedUserDto>> GetLinkedUsers(GetLinkedUsersInput input)
+        public async Task<PagedResultDto<LinkedUserDto>> GetLinkedUsers(GetLinkedUsersInput input)
         {
             var currentUserAccount = await _userLinkManager.GetUserAccountAsync(AbpSession.ToUserIdentifier());
             if (currentUserAccount == null)
             {
-                return new PagedResultOutput<LinkedUserDto>(0, new List<LinkedUserDto>());
+                return new PagedResultDto<LinkedUserDto>(0, new List<LinkedUserDto>());
             }
 
             var query = CreateLinkedUsersQuery(currentUserAccount, input.Sorting);
@@ -74,25 +78,25 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
             var totalCount = await query.CountAsync();
             var linkedUsers = await query.ToListAsync();
 
-            return new PagedResultOutput<LinkedUserDto>(
+            return new PagedResultDto<LinkedUserDto>(
                 totalCount,
                 linkedUsers
             );
         }
 
         [DisableAuditing]
-        public async Task<ListResultOutput<LinkedUserDto>> GetRecentlyUsedLinkedUsers()
+        public async Task<ListResultDto<LinkedUserDto>> GetRecentlyUsedLinkedUsers()
         {
             var currentUserAccount = await _userLinkManager.GetUserAccountAsync(AbpSession.ToUserIdentifier());
             if (currentUserAccount == null)
             {
-                return new ListResultOutput<LinkedUserDto>();
+                return new ListResultDto<LinkedUserDto>();
             }
 
             var query = CreateLinkedUsersQuery(currentUserAccount, "LastLoginTime DESC");
             var recentlyUsedlinkedUsers = await query.Skip(0).Take(3).ToListAsync();
 
-            return new ListResultOutput<LinkedUserDto>(recentlyUsedlinkedUsers);
+            return new ListResultDto<LinkedUserDto>(recentlyUsedlinkedUsers);
         }
 
         public async Task UnlinkUser(UnlinkUserInput input)
@@ -132,6 +136,10 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
                         Username = userAccount.UserName,
                         LastLoginTime = userAccount.LastLoginTime
                     }).OrderBy(sorting);
+        }
+
+        Task<PagedResultDto<LinkedUserDto>> IUserLinkAppService.GetRecentlyUsedLinkedUsers() {
+            throw new NotImplementedException();
         }
     }
 }

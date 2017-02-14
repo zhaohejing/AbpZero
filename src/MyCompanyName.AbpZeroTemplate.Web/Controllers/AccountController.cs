@@ -42,12 +42,15 @@ using Recaptcha.Web;
 using Recaptcha.Web.Mvc;
 using Newtonsoft.Json;
 using MyCompanyName.AbpZeroTemplate.Security;
+using AbpCompanyName.AbpProjectName.Authorization;
+using Abp.Localization;
 
 namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
 {
     public class AccountController : AbpZeroTemplateControllerBase
     {
         private readonly UserManager _userManager;
+        private readonly LogInManager _loginManager;
         private readonly RoleManager _roleManager;
         private readonly TenantManager _tenantManager;
         private readonly IMultiTenancyConfig _multiTenancyConfig;
@@ -60,7 +63,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
         private readonly AbpLoginResultTypeHelper _abpLoginResultTypeHelper;
         private readonly IUserLinkManager _userLinkManager;
         private readonly INotificationSubscriptionManager _notificationSubscriptionManager;
-
+        private readonly ILanguageManager _languageManager;
         private IAuthenticationManager AuthenticationManager
         {
             get
@@ -70,6 +73,8 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
         }
 
         public AccountController(
+            ILanguageManager languageManager,
+            LogInManager loginManager,
             UserManager userManager,
             IMultiTenancyConfig multiTenancyConfig,
             IUserEmailer userEmailer,
@@ -85,6 +90,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
             INotificationSubscriptionManager notificationSubscriptionManager)
         {
             _userManager = userManager;
+            _loginManager = loginManager;
             _multiTenancyConfig = multiTenancyConfig;
             _userEmailer = userEmailer;
             _roleManager = roleManager;
@@ -94,6 +100,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
             _cacheManager = cacheManager;
             _webUrlService = webUrlService;
             _appNotifier = appNotifier;
+            _languageManager = languageManager;
             _abpLoginResultTypeHelper = abpLoginResultTypeHelper;
             _userLinkManager = userLinkManager;
             _notificationSubscriptionManager = notificationSubscriptionManager;
@@ -181,9 +188,9 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
             AuthenticationManager.SignIn(new AuthenticationProperties { IsPersistent = rememberMe }, identity);
         }
 
-        private async Task<AbpUserManager<Tenant, Role, User>.AbpLoginResult> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
+        private async Task<AbpLoginResult<Tenant, User>> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
         {
-            var loginResult = await _userManager.LoginAsync(usernameOrEmailAddress, password, tenancyName);
+            var loginResult = await _loginManager.LoginAsync(usernameOrEmailAddress, password, tenancyName);
 
             switch (loginResult.Result)
             {
@@ -333,10 +340,10 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
                 //Directly login if possible
                 if (user.IsActive && (user.IsEmailConfirmed || !isEmailConfirmationRequiredForLogin))
                 {
-                    AbpUserManager<Tenant, Role, User>.AbpLoginResult loginResult;
+                    AbpLoginResult<Tenant, User> loginResult;
                     if (externalLoginInfo != null)
                     {
-                        loginResult = await _userManager.LoginAsync(externalLoginInfo.Login, tenant.TenancyName);
+                        loginResult = await _loginManager.LoginAsync(externalLoginInfo.Login, tenant.TenancyName);
                     }
                     else
                     {
@@ -558,8 +565,9 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
             return PartialView("~/Views/Account/_Languages.cshtml",
                 new LanguagesViewModel
                 {
-                    AllLanguages = LocalizationManager.GetAllLanguages(),
-                    CurrentLanguage = LocalizationManager.CurrentLanguage
+
+                    AllLanguages = _languageManager.GetLanguages(),
+                    CurrentLanguage = _languageManager.CurrentLanguage
                 });
         }
 
@@ -658,7 +666,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
                 }
             }
 
-            var loginResult = await _userManager.LoginAsync(loginInfo.Login, tenancyName);
+            var loginResult = await _loginManager.LoginAsync(loginInfo.Login, tenancyName);
 
             switch (loginResult.Result)
             {

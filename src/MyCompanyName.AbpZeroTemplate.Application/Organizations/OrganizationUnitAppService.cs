@@ -30,7 +30,7 @@ namespace MyCompanyName.AbpZeroTemplate.Organizations
             _userOrganizationUnitRepository = userOrganizationUnitRepository;
         }
 
-        public async Task<ListResultOutput<OrganizationUnitDto>> GetOrganizationUnits()
+        public async Task<ListResultDto<OrganizationUnitDto>> GetOrganizationUnits()
         {
             var query =
                 from ou in _organizationUnitRepository.GetAll()
@@ -39,7 +39,7 @@ namespace MyCompanyName.AbpZeroTemplate.Organizations
 
             var items = await query.ToListAsync();
             
-            return new ListResultOutput<OrganizationUnitDto>(
+            return new ListResultDto<OrganizationUnitDto>(
                 items.Select(item =>
                 {
                     var dto = item.ou.MapTo<OrganizationUnitDto>();
@@ -48,7 +48,7 @@ namespace MyCompanyName.AbpZeroTemplate.Organizations
                 }).ToList());
         }
 
-        public async Task<PagedResultOutput<OrganizationUnitUserListDto>> GetOrganizationUnitUsers(GetOrganizationUnitUsersInput input)
+        public async Task<PagedResultDto<OrganizationUnitUserListDto>> GetOrganizationUnitUsers(GetOrganizationUnitUsersInput input)
         {
             var query = from uou in _userOrganizationUnitRepository.GetAll()
                 join ou in _organizationUnitRepository.GetAll() on uou.OrganizationUnitId equals ou.Id
@@ -60,7 +60,7 @@ namespace MyCompanyName.AbpZeroTemplate.Organizations
             var totalCount = await query.CountAsync();
             var items = await query.PageBy(input).ToListAsync();
 
-            return new PagedResultOutput<OrganizationUnitUserListDto>(
+            return new PagedResultDto<OrganizationUnitUserListDto>(
                 totalCount,
                 items.Select(item =>
                 {
@@ -104,9 +104,9 @@ namespace MyCompanyName.AbpZeroTemplate.Organizations
         }
 
         [AbpAuthorize(AppPermissions.Pages_Administration_OrganizationUnits_ManageOrganizationTree)]
-        public async Task DeleteOrganizationUnit(IdInput<long> input)
+        public async Task DeleteOrganizationUnit(NullableIdDto<long> input)
         {
-            await _organizationUnitManager.DeleteAsync(input.Id);
+            await _organizationUnitManager.DeleteAsync(input.Id.Value);
         }
 
         [AbpAuthorize(AppPermissions.Pages_Administration_OrganizationUnits_ManageMembers)]

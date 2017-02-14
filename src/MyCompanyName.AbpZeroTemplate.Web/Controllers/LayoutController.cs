@@ -8,6 +8,7 @@ using MyCompanyName.AbpZeroTemplate.Configuration;
 using MyCompanyName.AbpZeroTemplate.Sessions;
 using MyCompanyName.AbpZeroTemplate.Web.Models.Layout;
 using MyCompanyName.AbpZeroTemplate.Web.Navigation;
+using Abp.Localization;
 
 namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
 {
@@ -19,12 +20,15 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
         private readonly ISessionAppService _sessionAppService;
         private readonly IUserNavigationManager _userNavigationManager;
         private readonly IMultiTenancyConfig _multiTenancyConfig;
-
-        public LayoutController(ISessionAppService sessionAppService, IUserNavigationManager userNavigationManager, IMultiTenancyConfig multiTenancyConfig)
+        private readonly ILanguageManager _languageManager;
+        public LayoutController(ISessionAppService sessionAppService,
+            IUserNavigationManager userNavigationManager, IMultiTenancyConfig multiTenancyConfig
+            , ILanguageManager languageManager)
         {
             _sessionAppService = sessionAppService;
             _userNavigationManager = userNavigationManager;
             _multiTenancyConfig = multiTenancyConfig;
+            _languageManager = languageManager;
         }
 
         [ChildActionOnly]
@@ -37,8 +41,8 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Controllers
                 headerModel.LoginInformations = AsyncHelper.RunSync(() => _sessionAppService.GetCurrentLoginInformations());
             }
 
-            headerModel.Languages = LocalizationManager.GetAllLanguages();
-            headerModel.CurrentLanguage = LocalizationManager.CurrentLanguage;
+            headerModel.Languages = _languageManager.GetLanguages();
+            headerModel.CurrentLanguage = _languageManager.CurrentLanguage;
             
             headerModel.Menu = AsyncHelper.RunSync(() => _userNavigationManager.GetMenuAsync(FrontEndNavigationProvider.MenuName, AbpSession.ToUserIdentifier()));
             headerModel.CurrentPageName = currentPageName;

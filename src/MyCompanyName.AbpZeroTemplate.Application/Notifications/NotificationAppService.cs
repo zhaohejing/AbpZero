@@ -53,15 +53,15 @@ namespace MyCompanyName.AbpZeroTemplate.Notifications
             await _userNotificationManager.UpdateAllUserNotificationStatesAsync(AbpSession.ToUserIdentifier(), UserNotificationState.Read);
         }
 
-        public async Task SetNotificationAsRead(IdInput<Guid> input)
+        public async Task SetNotificationAsRead(NullableIdDto<Guid> input)
         {
-            var userNotification = await _userNotificationManager.GetUserNotificationAsync(AbpSession.TenantId, input.Id);
+            var userNotification = await _userNotificationManager.GetUserNotificationAsync(AbpSession.TenantId, input.Id.Value);
             if (userNotification.UserId != AbpSession.GetUserId())
             {
                 throw new ApplicationException(string.Format("Given user notification id ({0}) is not belong to the current user ({1})", input.Id, AbpSession.GetUserId()));
             }
 
-            await _userNotificationManager.UpdateUserNotificationStateAsync(AbpSession.TenantId, input.Id, UserNotificationState.Read);
+            await _userNotificationManager.UpdateUserNotificationStateAsync(AbpSession.TenantId, input.Id.Value, UserNotificationState.Read);
         }
 
         public async Task<GetNotificationSettingsOutput> GetNotificationSettings()

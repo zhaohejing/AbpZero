@@ -8,6 +8,7 @@ using MyCompanyName.AbpZeroTemplate.Sessions;
 using MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Layout;
 using MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Startup;
 using MyCompanyName.AbpZeroTemplate.Web.Controllers;
+using Abp.Localization;
 
 namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
 {
@@ -17,15 +18,16 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
         private readonly ISessionAppService _sessionAppService;
         private readonly IUserNavigationManager _userNavigationManager;
         private readonly IMultiTenancyConfig _multiTenancyConfig;
-
+        private readonly ILanguageManager _languageManager;
         public LayoutController(
             ISessionAppService sessionAppService, 
             IUserNavigationManager userNavigationManager, 
-            IMultiTenancyConfig multiTenancyConfig)
+            IMultiTenancyConfig multiTenancyConfig, ILanguageManager languageManager)
         {
             _sessionAppService = sessionAppService;
             _userNavigationManager = userNavigationManager;
             _multiTenancyConfig = multiTenancyConfig;
+            _languageManager = languageManager;
         }
 
         [ChildActionOnly]
@@ -34,8 +36,8 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
             var headerModel = new HeaderViewModel
             {
                 LoginInformations = AsyncHelper.RunSync(() => _sessionAppService.GetCurrentLoginInformations()),
-                Languages = LocalizationManager.GetAllLanguages(),
-                CurrentLanguage = LocalizationManager.CurrentLanguage,
+                Languages = _languageManager.GetLanguages(),
+                CurrentLanguage = _languageManager.CurrentLanguage,
                 IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled,
                 IsImpersonatedLogin = AbpSession.ImpersonatorUserId.HasValue
             };

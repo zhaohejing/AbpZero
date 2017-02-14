@@ -3,7 +3,7 @@ using Abp.Application.Services.Dto;
 
 namespace MyCompanyName.AbpZeroTemplate.Localization.Dto
 {
-    public class GetLanguagesOutput : ListResultOutput<ApplicationLanguageListDto>
+    public class GetLanguagesOutput : ListResultDto<ApplicationLanguageListDto>
     {
         public string DefaultLanguageName { get; set; }
 

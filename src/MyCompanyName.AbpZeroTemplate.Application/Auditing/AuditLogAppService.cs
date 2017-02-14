@@ -39,7 +39,7 @@ namespace MyCompanyName.AbpZeroTemplate.Auditing
             _namespaceStripper = namespaceStripper;
         }
         
-        public async Task<PagedResultOutput<AuditLogListDto>> GetAuditLogs(GetAuditLogsInput input)
+        public async Task<PagedResultDto<AuditLogListDto>> GetAuditLogs(GetAuditLogsInput input)
         {
             var query = CreateAuditLogAndUsersQuery(input);
 
@@ -52,7 +52,7 @@ namespace MyCompanyName.AbpZeroTemplate.Auditing
 
             var auditLogListDtos = ConvertToAuditLogListDtos(results);
 
-            return new PagedResultOutput<AuditLogListDto>(resultCount, auditLogListDtos);
+            return new PagedResultDto<AuditLogListDto>(resultCount, auditLogListDtos);
         }
 
         public async Task<FileDto> GetAuditLogsToExcel(GetAuditLogsInput input)

@@ -9,15 +9,15 @@ namespace MyCompanyName.AbpZeroTemplate.Localization
     {
         Task<GetLanguagesOutput> GetLanguages();
 
-        Task<GetLanguageForEditOutput> GetLanguageForEdit(NullableIdInput input);
+        Task<GetLanguageForEditOutput> GetLanguageForEdit(NullableIdDto input);
 
         Task CreateOrUpdateLanguage(CreateOrUpdateLanguageInput input);
 
-        Task DeleteLanguage(IdInput input);
+        Task DeleteLanguage(NullableIdDto input);
 
         Task SetDefaultLanguage(SetDefaultLanguageInput input);
 
-        Task<PagedResultOutput<LanguageTextListDto>> GetLanguageTexts(GetLanguageTextsInput input);
+        Task<PagedResultDto<LanguageTextListDto>> GetLanguageTexts(GetLanguageTextsInput input);
 
         Task UpdateLanguageText(UpdateLanguageTextInput input);
     }

@@ -20,15 +20,15 @@ namespace MyCompanyName.AbpZeroTemplate.Common
             _editionManager = editionManager;
         }
 
-        public async Task<ListResultOutput<ComboboxItemDto>> GetEditionsForCombobox()
+        public async Task<ListResultDto<ComboboxItemDto>> GetEditionsForCombobox()
         {
             var editions = await _editionManager.Editions.ToListAsync();
-            return new ListResultOutput<ComboboxItemDto>(
+            return new ListResultDto<ComboboxItemDto>(
                 editions.Select(e => new ComboboxItemDto(e.Id.ToString(), e.DisplayName)).ToList()
                 );
         }
 
-        public async Task<PagedResultOutput<NameValueDto>> FindUsers(FindUsersInput input)
+        public async Task<PagedResultDto<NameValueDto>> FindUsers(FindUsersInput input)
         {
             if (AbpSession.TenantId != null)
             {
@@ -55,7 +55,7 @@ namespace MyCompanyName.AbpZeroTemplate.Common
                     .PageBy(input)
                     .ToListAsync();
 
-                return new PagedResultOutput<NameValueDto>(
+                return new PagedResultDto<NameValueDto>(
                     userCount,
                     users.Select(u =>
                         new NameValueDto(

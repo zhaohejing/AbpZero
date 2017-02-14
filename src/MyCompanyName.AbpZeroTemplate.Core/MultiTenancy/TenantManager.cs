@@ -22,7 +22,7 @@ namespace MyCompanyName.AbpZeroTemplate.MultiTenancy
     /// <summary>
     /// Tenant manager.
     /// </summary>
-    public class TenantManager : AbpTenantManager<Tenant, Role, User>
+    public class TenantManager : AbpTenantManager<Tenant, User>
     {
         private readonly IUnitOfWorkManager _unitOfWorkManager;
         private readonly RoleManager _roleManager;

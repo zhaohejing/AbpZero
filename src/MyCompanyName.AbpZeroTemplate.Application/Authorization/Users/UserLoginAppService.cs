@@ -24,7 +24,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
         }
 
         [DisableAuditing]
-        public async Task<ListResultOutput<UserLoginAttemptDto>> GetRecentUserLoginAttempts()
+        public async Task<ListResultDto<UserLoginAttemptDto>> GetRecentUserLoginAttempts()
         {
             var userId = AbpSession.GetUserId();
 
@@ -34,7 +34,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
                 .Take(10)
                 .ToListAsync();
 
-            return new ListResultOutput<UserLoginAttemptDto>(loginAttempts.MapTo<List<UserLoginAttemptDto>>());
+            return new ListResultDto<UserLoginAttemptDto>(loginAttempts.MapTo<List<UserLoginAttemptDto>>());
         }
     }
 }

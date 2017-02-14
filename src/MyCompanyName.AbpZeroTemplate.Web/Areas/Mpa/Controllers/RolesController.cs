@@ -47,7 +47,7 @@ namespace MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Controllers
         [AbpMvcAuthorize(AppPermissions.Pages_Administration_Roles_Create, AppPermissions.Pages_Administration_Roles_Edit)]
         public async Task<PartialViewResult> CreateOrEditModal(int? id)
         {
-            var output = await _roleAppService.GetRoleForEdit(new NullableIdInput { Id = id });
+            var output = await _roleAppService.GetRoleForEdit(new NullableIdDto { Id = id });
             var viewModel = new CreateOrEditRoleModalViewModel(output);
 
             return PartialView("_CreateOrEditModal", viewModel);

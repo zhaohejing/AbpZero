@@ -28,7 +28,7 @@ namespace MyCompanyName.AbpZeroTemplate.MultiTenancy
             _tenantManager = tenantManager;
         }
 
-        public async Task<PagedResultOutput<TenantListDto>> GetTenants(GetTenantsInput input)
+        public async Task<PagedResultDto<TenantListDto>> GetTenants(GetTenantsInput input)
         {
             var query = TenantManager.Tenants
                 .Include(t => t.Edition)
@@ -42,7 +42,7 @@ namespace MyCompanyName.AbpZeroTemplate.MultiTenancy
             var tenantCount = await query.CountAsync();
             var tenants = await query.OrderBy(input.Sorting).PageBy(input).ToListAsync();
 
-            return new PagedResultOutput<TenantListDto>(
+            return new PagedResultDto<TenantListDto>(
                 tenantCount,
                 tenants.MapTo<List<TenantListDto>>()
                 );
@@ -64,9 +64,9 @@ namespace MyCompanyName.AbpZeroTemplate.MultiTenancy
         }
 
         [AbpAuthorize(AppPermissions.Pages_Tenants_Edit)]
-        public async Task<TenantEditDto> GetTenantForEdit(EntityRequestInput input)
+        public async Task<TenantEditDto> GetTenantForEdit(NullableIdDto input)
         {
-            var tenantEditDto = (await TenantManager.GetByIdAsync(input.Id)).MapTo<TenantEditDto>();
+            var tenantEditDto = (await TenantManager.GetByIdAsync(input.Id.Value)).MapTo<TenantEditDto>();
             tenantEditDto.ConnectionString = SimpleStringCipher.Instance.Decrypt(tenantEditDto.ConnectionString);
             return tenantEditDto;
         }
@@ -81,17 +81,18 @@ namespace MyCompanyName.AbpZeroTemplate.MultiTenancy
         }
 
         [AbpAuthorize(AppPermissions.Pages_Tenants_Delete)]
-        public async Task DeleteTenant(EntityRequestInput input)
+        public async Task DeleteTenant(NullableIdDto input)
         {
-            var tenant = await TenantManager.GetByIdAsync(input.Id);
+         
+            var tenant = await TenantManager.GetByIdAsync(input.Id.Value);
             CheckErrors(await TenantManager.DeleteAsync(tenant));
         }
 
         [AbpAuthorize(AppPermissions.Pages_Tenants_ChangeFeatures)]
-        public async Task<GetTenantFeaturesForEditOutput> GetTenantFeaturesForEdit(EntityRequestInput input)
+        public async Task<GetTenantFeaturesForEditOutput> GetTenantFeaturesForEdit(NullableIdDto input)
         {
             var features = FeatureManager.GetAll();
-            var featureValues = await TenantManager.GetFeatureValuesAsync(input.Id);
+            var featureValues = await TenantManager.GetFeatureValuesAsync(input.Id.Value);
 
             return new GetTenantFeaturesForEditOutput
             {
@@ -107,9 +108,9 @@ namespace MyCompanyName.AbpZeroTemplate.MultiTenancy
         }
 
         [AbpAuthorize(AppPermissions.Pages_Tenants_ChangeFeatures)]
-        public async Task ResetTenantSpecificFeatures(EntityRequestInput input)
+        public async Task ResetTenantSpecificFeatures(NullableIdDto input)
         {
-            await TenantManager.ResetAllFeaturesAsync(input.Id);
+            await TenantManager.ResetAllFeaturesAsync(input.Id.Value);
         }
     }
 }

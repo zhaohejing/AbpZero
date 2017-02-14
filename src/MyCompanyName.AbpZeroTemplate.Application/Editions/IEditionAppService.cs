@@ -8,13 +8,13 @@ namespace MyCompanyName.AbpZeroTemplate.Editions
 {
     public interface IEditionAppService : IApplicationService
     {
-        Task<ListResultOutput<EditionListDto>> GetEditions();
+        Task<ListResultDto<EditionListDto>> GetEditions();
 
-        Task<GetEditionForEditOutput> GetEditionForEdit(NullableIdInput input);
+        Task<GetEditionForEditOutput> GetEditionForEdit(NullableIdDto input);
 
         Task CreateOrUpdateEdition(CreateOrUpdateEditionDto input);
 
-        Task DeleteEdition(EntityRequestInput input);
+        Task DeleteEdition(NullableIdDto input);
 
         Task<List<ComboboxItemDto>> GetEditionComboboxItems(int? selectedEditionId = null);
     }

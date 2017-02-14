@@ -9,7 +9,7 @@ namespace MyCompanyName.AbpZeroTemplate.Chat
     {
         GetUserChatFriendsWithSettingsOutput GetUserChatFriendsWithSettings();
 
-        Task<ListResultOutput<ChatMessageDto>> GetUserChatMessages(GetUserChatMessagesInput input);
+        Task<ListResultDto<ChatMessageDto>> GetUserChatMessages(GetUserChatMessagesInput input);
 
         Task MarkAllUnreadMessagesOfUserAsRead(MarkAllUnreadMessagesOfUserAsReadInput input);
     }

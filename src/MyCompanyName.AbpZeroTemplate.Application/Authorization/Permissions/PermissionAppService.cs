@@ -9,7 +9,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Permissions
 {
     public class PermissionAppService : AbpZeroTemplateAppServiceBase, IPermissionAppService
     {
-        public ListResultOutput<FlatPermissionWithLevelDto> GetAllPermissions()
+        public ListResultDto<FlatPermissionWithLevelDto> GetAllPermissions()
         {
             var permissions = PermissionManager.GetAllPermissions();
             var rootPermissions = permissions.Where(p => p.Parent == null);
@@ -22,7 +22,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Permissions
                 AddPermission(rootPermission, permissions, result, level);
             }
 
-            return new ListResultOutput<FlatPermissionWithLevelDto>
+            return new ListResultDto<FlatPermissionWithLevelDto>
             {
                 Items = result
             };

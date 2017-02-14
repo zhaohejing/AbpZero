@@ -773,3 +773,332 @@ DEBUG 2017-02-14 14:00:12,160 [1    ] Abp.Logging.LogHelper                    -
 DEBUG 2017-02-14 14:00:12,161 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Roles.IRoleAppService' with service name 'app/role'.
 DEBUG 2017-02-14 14:00:12,162 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
 DEBUG 2017-02-14 14:00:12,163 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-02-14 16:40:40,266 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-02-14 16:40:40,281 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-02-14 16:40:40,288 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.Web.AbpZeroTemplateWebModule, MyCompanyName.AbpZeroTemplate.Web, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,289 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,289 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,289 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,289 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,289 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.AbpZeroTemplateDataModule, MyCompanyName.AbpZeroTemplate.EntityFramework, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,289 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,289 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,290 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,290 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.AbpZeroTemplateCoreModule, MyCompanyName.AbpZeroTemplate.Core, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,290 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,290 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,290 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.AbpZeroTemplateApplicationModule, MyCompanyName.AbpZeroTemplate.Application, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,290 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.WebApi.AbpZeroTemplateWebApiModule, MyCompanyName.AbpZeroTemplate.WebApi, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,291 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,291 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.OData.AbpWebApiODataModule, Abp.Web.Api.OData, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,291 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,291 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,291 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:40,293 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-02-14 16:40:40,443 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-02-14 16:40:40,443 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-02-14 16:40:40,443 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-02-14 16:40:40,443 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-02-14 16:40:40,913 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: MyCompanyName.AbpZeroTemplate.EntityFramework.AbpZeroTemplateDbContext, MyCompanyName.AbpZeroTemplate.EntityFramework, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:40:42,889 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-02-14 16:40:42,896 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-02-14 16:40:42,897 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-02-14 16:40:42,903 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-02-14 16:40:42,912 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-02-14 16:40:43,002 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-02-14 16:40:44,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-02-14 16:40:44,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Friendships.Cache.FriendCacheItem
+DEBUG 2017-02-14 16:40:44,428 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-02-14 16:40:44,428 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-02-14 16:40:44,428 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Friendships.Dto.FriendDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Editions.Dto.EditionEditDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Editions.Dto.FlatFeatureDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Editions.Dto.EditionListDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Chat.Dto.ChatMessageDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Chat.Dto.ChatUserDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Users.Dto.UserListDto
+DEBUG 2017-02-14 16:40:44,429 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Auditing.Dto.AuditLogListDto
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-02-14 16:40:44,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-02-14 16:40:44,971 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-02-14 16:40:44,972 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-02-14 16:40:44,973 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-02-14 16:40:44,974 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-02-14 16:40:44,975 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-02-14 16:40:44,976 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-02-14 16:40:44,977 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-02-14 16:40:44,978 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-02-14 16:40:44,979 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-02-14 16:40:44,980 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-02-14 16:40:44,981 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-02-14 16:40:44,982 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-02-14 16:40:44,983 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-02-14 16:40:44,984 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-02-14 16:40:44,985 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-02-14 16:40:44,986 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-02-14 16:40:44,988 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-02-14 16:40:44,990 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-02-14 16:40:44,992 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-02-14 16:40:44,993 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-02-14 16:40:44,995 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-02-14 16:40:44,997 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-02-14 16:43:34,408 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-02-14 16:43:34,420 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-02-14 16:43:34,424 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.Web.AbpZeroTemplateWebModule, MyCompanyName.AbpZeroTemplate.Web, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.AbpZeroTemplateDataModule, MyCompanyName.AbpZeroTemplate.EntityFramework, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,427 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,427 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.AbpZeroTemplateCoreModule, MyCompanyName.AbpZeroTemplate.Core, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,427 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,427 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,427 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.AbpZeroTemplateApplicationModule, MyCompanyName.AbpZeroTemplate.Application, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,427 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyCompanyName.AbpZeroTemplate.WebApi.AbpZeroTemplateWebApiModule, MyCompanyName.AbpZeroTemplate.WebApi, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,428 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,428 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.OData.AbpWebApiODataModule, Abp.Web.Api.OData, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,428 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,428 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,428 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.4.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:34,431 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-02-14 16:43:34,589 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-02-14 16:43:34,590 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-02-14 16:43:34,590 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-02-14 16:43:34,590 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-02-14 16:43:35,002 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: MyCompanyName.AbpZeroTemplate.EntityFramework.AbpZeroTemplateDbContext, MyCompanyName.AbpZeroTemplate.EntityFramework, Version=1.12.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-02-14 16:43:36,656 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-02-14 16:43:36,664 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-02-14 16:43:36,665 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-02-14 16:43:36,670 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-02-14 16:43:36,679 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-02-14 16:43:36,778 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-02-14 16:43:38,108 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-02-14 16:43:38,108 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Friendships.Cache.FriendCacheItem
+DEBUG 2017-02-14 16:43:38,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-02-14 16:43:38,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-02-14 16:43:38,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-02-14 16:43:38,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-02-14 16:43:38,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-02-14 16:43:38,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-02-14 16:43:38,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-02-14 16:43:38,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-02-14 16:43:38,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-02-14 16:43:38,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Friendships.Dto.FriendDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Editions.Dto.EditionEditDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Editions.Dto.FlatFeatureDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Editions.Dto.EditionListDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Chat.Dto.ChatMessageDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Chat.Dto.ChatUserDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Users.Dto.UserListDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Auditing.Dto.AuditLogListDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-02-14 16:43:38,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-02-14 16:43:38,113 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyCompanyName.AbpZeroTemplate.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-02-14 16:43:38,540 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-02-14 16:43:38,541 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-02-14 16:43:38,542 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-02-14 16:43:38,543 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-02-14 16:43:38,545 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-02-14 16:43:38,546 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-02-14 16:43:38,547 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-02-14 16:43:38,548 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-02-14 16:43:38,549 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-02-14 16:43:38,550 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-02-14 16:43:38,551 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-02-14 16:43:38,553 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-02-14 16:43:38,554 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-02-14 16:43:38,555 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-02-14 16:43:38,556 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-02-14 16:43:38,557 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-02-14 16:43:38,558 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-02-14 16:43:38,559 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-02-14 16:43:38,560 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-02-14 16:43:38,562 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-02-14 16:43:38,563 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-02-14 16:43:38,564 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyCompanyName.AbpZeroTemplate.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+ERROR 2017-02-14 16:44:43,387 [11   ] nHandling.AbpApiExceptionFilterAttribute - 未实现该方法或操作。
+System.NotImplementedException: 未实现该方法或操作。
+   在 MyCompanyName.AbpZeroTemplate.Authorization.Users.UserLinkAppService.MyCompanyName.AbpZeroTemplate.Authorization.Users.IUserLinkAppService.GetRecentlyUsedLinkedUsers() 位置 D:\project\AbpZero\src\MyCompanyName.AbpZeroTemplate.Application\Authorization\Users\UserLinkAppService.cs:行号 142
+   在 Castle.Proxies.Invocations.IUserLinkAppService_GetRecentlyUsedLinkedUsers.InvokeMethodOnTarget()
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Authorization.AuthorizationInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationInterceptor.cs:行号 20
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 62
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 41
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 34
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Auditing\AuditingInterceptor.cs:行号 29
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:行号 34
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.UserLinkAppServiceProxy.GetRecentlyUsedLinkedUsers()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Extensions\ExceptionExtensions.cs:行号 18
+   在 Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:行号 48
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.DynamicApiController`1Proxy_1.GetRecentlyUsedLinkedUsers()
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:行号 30
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Security\AntiForgery\AbpAntiForgeryApiFilter.cs:行号 59
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:行号 63
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+DEBUG 2017-02-14 16:44:44,190 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"618d6968-da86-4ec5-8196-929ee964942b","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-02-14T08:44:44.1518144Z","Properties":{}}
+DEBUG 2017-02-14 16:44:44,704 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 618d6968-da86-4ec5-8196-929ee964942b
+DEBUG 2017-02-14 16:46:26,221 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 618d6968-da86-4ec5-8196-929ee964942b
+ERROR 2017-02-14 16:46:42,744 [24   ] nHandling.AbpApiExceptionFilterAttribute - 未实现该方法或操作。
+System.NotImplementedException: 未实现该方法或操作。
+   在 MyCompanyName.AbpZeroTemplate.Authorization.Users.UserLinkAppService.MyCompanyName.AbpZeroTemplate.Authorization.Users.IUserLinkAppService.GetRecentlyUsedLinkedUsers() 位置 D:\project\AbpZero\src\MyCompanyName.AbpZeroTemplate.Application\Authorization\Users\UserLinkAppService.cs:行号 142
+   在 Castle.Proxies.Invocations.IUserLinkAppService_GetRecentlyUsedLinkedUsers.InvokeMethodOnTarget()
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Authorization.AuthorizationInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationInterceptor.cs:行号 20
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 62
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 41
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:行号 34
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Auditing\AuditingInterceptor.cs:行号 29
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\ValidationInterceptor.cs:行号 34
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.UserLinkAppServiceProxy.GetRecentlyUsedLinkedUsers()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp\Extensions\ExceptionExtensions.cs:行号 18
+   在 Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation) 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Controllers\Dynamic\Interceptors\AbpDynamicApiControllerInterceptor.cs:行号 48
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.DynamicApiController`1Proxy_1.GetRecentlyUsedLinkedUsers()
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Uow\AbpApiUowFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Validation\AbpApiValidationFilter.cs:行号 40
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Auditing\AbpApiAuditFilter.cs:行号 30
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Security\AntiForgery\AbpAntiForgeryApiFilter.cs:行号 59
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext() 位置 D:\Halil\Github\aspnetboilerplate\src\Abp.Web.Api\WebApi\Authorization\AbpApiAuthorizeFilter.cs:行号 63
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+DEBUG 2017-02-14 16:46:42,976 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"5effab8b-44a6-4c45-b80d-c9b7e62304f4","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-02-14T08:46:42.9740476Z","Properties":{}}
+DEBUG 2017-02-14 16:46:43,003 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 5effab8b-44a6-4c45-b80d-c9b7e62304f4

@@ -13,7 +13,7 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201702140308514_wwww"; }
+            get { return "201702140839008_wwww"; }
         }
         
         string IMigrationMetadata.Source

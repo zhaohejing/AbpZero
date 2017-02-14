@@ -331,8 +331,15 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations
                         Surname = c.String(nullable: false, maxLength: 32),
                         Password = c.String(nullable: false, maxLength: 128),
                         IsEmailConfirmed = c.Boolean(nullable: false),
-                        EmailConfirmationCode = c.String(maxLength: 128),
+                        EmailConfirmationCode = c.String(maxLength: 328),
                         PasswordResetCode = c.String(maxLength: 328),
+                        LockoutEndDateUtc = c.DateTime(),
+                        AccessFailedCount = c.Int(nullable: false),
+                        IsLockoutEnabled = c.Boolean(nullable: false),
+                        PhoneNumber = c.String(),
+                        IsPhoneNumberConfirmed = c.Boolean(nullable: false),
+                        SecurityStamp = c.String(),
+                        IsTwoFactorEnabled = c.Boolean(nullable: false),
                         IsActive = c.Boolean(nullable: false),
                         UserName = c.String(nullable: false, maxLength: 32),
                         TenantId = c.Int(),
@@ -358,6 +365,26 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations
                 .Index(t => t.DeleterUserId)
                 .Index(t => t.LastModifierUserId)
                 .Index(t => t.CreatorUserId);
+            
+            CreateTable(
+                "dbo.AbpUserClaims",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        TenantId = c.Int(),
+                        UserId = c.Long(nullable: false),
+                        ClaimType = c.String(),
+                        ClaimValue = c.String(),
+                        CreationTime = c.DateTime(nullable: false),
+                        CreatorUserId = c.Long(),
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_UserClaim_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AbpUsers", t => t.UserId, cascadeDelete: true)
+                .Index(t => t.UserId);
             
             CreateTable(
                 "dbo.AbpUserLogins",
@@ -574,6 +601,7 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations
             DropForeignKey("dbo.AbpUsers", "LastModifierUserId", "dbo.AbpUsers");
             DropForeignKey("dbo.AbpUsers", "DeleterUserId", "dbo.AbpUsers");
             DropForeignKey("dbo.AbpUsers", "CreatorUserId", "dbo.AbpUsers");
+            DropForeignKey("dbo.AbpUserClaims", "UserId", "dbo.AbpUsers");
             DropForeignKey("dbo.AbpOrganizationUnits", "ParentId", "dbo.AbpOrganizationUnits");
             DropForeignKey("dbo.AbpFeatures", "EditionId", "dbo.AbpEditions");
             DropIndex("dbo.AbpUserNotifications", new[] { "UserId", "State", "CreationTime" });
@@ -586,6 +614,7 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations
             DropIndex("dbo.AbpSettings", new[] { "UserId" });
             DropIndex("dbo.AbpUserRoles", new[] { "UserId" });
             DropIndex("dbo.AbpUserLogins", new[] { "UserId" });
+            DropIndex("dbo.AbpUserClaims", new[] { "UserId" });
             DropIndex("dbo.AbpUsers", new[] { "CreatorUserId" });
             DropIndex("dbo.AbpUsers", new[] { "LastModifierUserId" });
             DropIndex("dbo.AbpUsers", new[] { "DeleterUserId" });
@@ -642,6 +671,11 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations
                 removedAnnotations: new Dictionary<string, object>
                 {
                     { "DynamicFilter_UserLogin_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
+            DropTable("dbo.AbpUserClaims",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_UserClaim_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
             DropTable("dbo.AbpUsers",
                 removedAnnotations: new Dictionary<string, object>

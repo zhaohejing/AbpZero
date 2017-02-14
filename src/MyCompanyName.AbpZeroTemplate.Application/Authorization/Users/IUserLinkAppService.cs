@@ -11,8 +11,8 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
 
         Task<PagedResultDto<LinkedUserDto>> GetLinkedUsers(GetLinkedUsersInput input);
 
-        Task<PagedResultDto<LinkedUserDto>> GetRecentlyUsedLinkedUsers();
-
+        Task<ListResultDto<LinkedUserDto>> GetRecentlyUsedLinkedUsers();
+      
         Task UnlinkUser(UnlinkUserInput input);
     }
 }

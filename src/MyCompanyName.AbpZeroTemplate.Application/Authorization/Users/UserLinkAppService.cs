@@ -62,7 +62,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
 
             await _userLinkManager.Link(GetCurrentUser(), loginResult.User);
         }
-
+      
         public async Task<PagedResultDto<LinkedUserDto>> GetLinkedUsers(GetLinkedUsersInput input)
         {
             var currentUserAccount = await _userLinkManager.GetUserAccountAsync(AbpSession.ToUserIdentifier());
@@ -83,11 +83,11 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
                 linkedUsers
             );
         }
-
+   
         [DisableAuditing]
         public async Task<ListResultDto<LinkedUserDto>> GetRecentlyUsedLinkedUsers()
-        {
-            var currentUserAccount = await _userLinkManager.GetUserAccountAsync(AbpSession.ToUserIdentifier());
+        {                                             
+   var currentUserAccount = await _userLinkManager.GetUserAccountAsync(AbpSession.ToUserIdentifier());
             if (currentUserAccount == null)
             {
                 return new ListResultDto<LinkedUserDto>();
@@ -98,7 +98,7 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
 
             return new ListResultDto<LinkedUserDto>(recentlyUsedlinkedUsers);
         }
-
+   
         public async Task UnlinkUser(UnlinkUserInput input)
         {
             var currentUserAccount = await _userLinkManager.GetUserAccountAsync(AbpSession.ToUserIdentifier());
@@ -138,8 +138,6 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization.Users
                     }).OrderBy(sorting);
         }
 
-        Task<PagedResultDto<LinkedUserDto>> IUserLinkAppService.GetRecentlyUsedLinkedUsers() {
-            throw new NotImplementedException();
-        }
-    }
+      
+    }  
 }

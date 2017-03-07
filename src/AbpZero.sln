@@ -3,17 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompanyName.AbpZeroTemplate.Application", "MyCompanyName.AbpZeroTemplate.Application\MyCompanyName.AbpZeroTemplate.Application.csproj", "{EDF5D964-4C0F-4F19-B674-58A38A5E5401}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J.Application", "MyCompanyName.AbpZeroTemplate.Application\J.Application.csproj", "{EDF5D964-4C0F-4F19-B674-58A38A5E5401}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompanyName.AbpZeroTemplate.Core", "MyCompanyName.AbpZeroTemplate.Core\MyCompanyName.AbpZeroTemplate.Core.csproj", "{17298EA0-AF73-4F30-B6F1-2066100D7D74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J.Core", "MyCompanyName.AbpZeroTemplate.Core\J.Core.csproj", "{17298EA0-AF73-4F30-B6F1-2066100D7D74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompanyName.AbpZeroTemplate.EntityFramework", "MyCompanyName.AbpZeroTemplate.EntityFramework\MyCompanyName.AbpZeroTemplate.EntityFramework.csproj", "{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J.EntityFramework", "MyCompanyName.AbpZeroTemplate.EntityFramework\J.EntityFramework.csproj", "{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompanyName.AbpZeroTemplate.Web", "MyCompanyName.AbpZeroTemplate.Web\MyCompanyName.AbpZeroTemplate.Web.csproj", "{897F6FD8-6F90-48E4-95A5-B4429B896205}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J.Web", "MyCompanyName.AbpZeroTemplate.Web\J.Web.csproj", "{897F6FD8-6F90-48E4-95A5-B4429B896205}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompanyName.AbpZeroTemplate.WebApi", "MyCompanyName.AbpZeroTemplate.WebApi\MyCompanyName.AbpZeroTemplate.WebApi.csproj", "{5EB52D3D-09FD-463A-B02A-8D9856BD3724}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J.WebApi", "MyCompanyName.AbpZeroTemplate.WebApi\J.WebApi.csproj", "{5EB52D3D-09FD-463A-B02A-8D9856BD3724}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompanyName.AbpZeroTemplate.Migrator", "MyCompanyName.AbpZeroTemplate.Migrator\MyCompanyName.AbpZeroTemplate.Migrator.csproj", "{B156DA32-D231-43B8-AE22-61C0C6B9F517}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J.Migrator", "MyCompanyName.AbpZeroTemplate.Migrator\J.Migrator.csproj", "{B156DA32-D231-43B8-AE22-61C0C6B9F517}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Presentation", "01-Presentation", "{0E5E08AF-796C-42CB-AF55-EA67323B7C24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Application", "02-Application", "{BF3F1CB9-55BD-4A85-9F76-4240CB2BD6D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Core", "03-Core", "{F95EB124-B8FD-4205-A7E0-C827991BDEBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-Repository", "04-Repository", "{A13C87C9-E053-4A08-89C2-D434BFA58D97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,5 +56,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EDF5D964-4C0F-4F19-B674-58A38A5E5401} = {BF3F1CB9-55BD-4A85-9F76-4240CB2BD6D9}
+		{17298EA0-AF73-4F30-B6F1-2066100D7D74} = {F95EB124-B8FD-4205-A7E0-C827991BDEBC}
+		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300} = {A13C87C9-E053-4A08-89C2-D434BFA58D97}
+		{897F6FD8-6F90-48E4-95A5-B4429B896205} = {0E5E08AF-796C-42CB-AF55-EA67323B7C24}
+		{5EB52D3D-09FD-463A-B02A-8D9856BD3724} = {0E5E08AF-796C-42CB-AF55-EA67323B7C24}
+		{B156DA32-D231-43B8-AE22-61C0C6B9F517} = {A13C87C9-E053-4A08-89C2-D434BFA58D97}
 	EndGlobalSection
 EndGlobal

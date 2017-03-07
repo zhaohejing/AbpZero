@@ -13,7 +13,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MyCompanyName.AbpZeroTemplate.Web</RootNamespace>
-    <AssemblyName>MyCompanyName.AbpZeroTemplate.Web</AssemblyName>
+    <AssemblyName>J.Web</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -3287,21 +3287,21 @@
     <TypeScriptCompile Include="Abp\Framework\scripts\libs\abp.signalr.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyCompanyName.AbpZeroTemplate.Application\MyCompanyName.AbpZeroTemplate.Application.csproj">
+    <ProjectReference Include="..\MyCompanyName.AbpZeroTemplate.Application\J.Application.csproj">
       <Project>{edf5d964-4c0f-4f19-b674-58a38a5e5401}</Project>
-      <Name>MyCompanyName.AbpZeroTemplate.Application</Name>
+      <Name>J.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyCompanyName.AbpZeroTemplate.Core\MyCompanyName.AbpZeroTemplate.Core.csproj">
+    <ProjectReference Include="..\MyCompanyName.AbpZeroTemplate.Core\J.Core.csproj">
       <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
-      <Name>MyCompanyName.AbpZeroTemplate.Core</Name>
+      <Name>J.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyCompanyName.AbpZeroTemplate.EntityFramework\MyCompanyName.AbpZeroTemplate.EntityFramework.csproj">
+    <ProjectReference Include="..\MyCompanyName.AbpZeroTemplate.EntityFramework\J.EntityFramework.csproj">
       <Project>{3979f157-deb0-4878-ab1d-4cef6b5a1300}</Project>
-      <Name>MyCompanyName.AbpZeroTemplate.EntityFramework</Name>
+      <Name>J.EntityFramework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyCompanyName.AbpZeroTemplate.WebApi\MyCompanyName.AbpZeroTemplate.WebApi.csproj">
+    <ProjectReference Include="..\MyCompanyName.AbpZeroTemplate.WebApi\J.WebApi.csproj">
       <Project>{5EB52D3D-09FD-463A-B02A-8D9856BD3724}</Project>
-      <Name>MyCompanyName.AbpZeroTemplate.WebApi</Name>
+      <Name>J.WebApi</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -5,7 +5,7 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations
     using System.Data.Entity.Infrastructure.Annotations;
     using System.Data.Entity.Migrations;
     
-    public partial class wwww : DbMigration
+    public partial class wwwww : DbMigration
     {
         public override void Up()
         {

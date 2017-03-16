@@ -20,7 +20,6 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations
         protected override void Seed(EntityFramework.AbpZeroTemplateDbContext context)
         {
             context.DisableAllFilters();
-
             if (Tenant == null)
             {
                 //Host seed

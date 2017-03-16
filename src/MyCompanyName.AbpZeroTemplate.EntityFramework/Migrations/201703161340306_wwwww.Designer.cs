@@ -7,13 +7,13 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class wwww : IMigrationMetadata
+    public sealed partial class wwwww : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(wwww));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(wwwww));
         
         string IMigrationMetadata.Id
         {
-            get { return "201702140839008_wwww"; }
+            get { return "201703161340306_wwwww"; }
         }
         
         string IMigrationMetadata.Source

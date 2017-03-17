@@ -14,7 +14,8 @@ namespace MyCompanyName.AbpZeroTemplate
     {
         public override void PreInitialize()
         {
-            Database.SetInitializer(new CreateDatabaseIfNotExists<AbpZeroTemplateDbContext>());
+          // Database.SetInitializer(new CreateDatabaseIfNotExists<AbpZeroTemplateDbContext>());
+            Database.SetInitializer(new CreateDatabaseIfNotExists<OracleDbContext>());
 
             //web.config (or app.config for non-web projects) file should contain a connection string named "Default".
             Configuration.DefaultNameOrConnectionString = "Default";

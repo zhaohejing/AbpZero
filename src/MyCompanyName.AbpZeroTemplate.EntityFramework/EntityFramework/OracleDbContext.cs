@@ -30,7 +30,7 @@ namespace MyCompanyName.AbpZeroTemplate.EntityFramework
          * But it may cause problems when working Migrate.exe of EF. ABP works either way.         * 
          */
         public OracleDbContext()
-            : base("DefaultOracle")
+            : base("OracleDbContext")
         {
 
         }
@@ -50,6 +50,12 @@ namespace MyCompanyName.AbpZeroTemplate.EntityFramework
             : base(dbConnection, true)
         {
 
+        }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("ORCL");
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

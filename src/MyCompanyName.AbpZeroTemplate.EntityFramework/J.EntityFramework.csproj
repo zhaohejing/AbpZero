@@ -150,12 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityFramework\AbpZeroTemplateDbContext.cs" />
+    <Compile Include="EntityFramework\OracleDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\AbpZeroTemplateRepositoryBase.cs" />
     <Compile Include="EntityFramework\AbpZeroDbMigrator.cs" />
-    <Compile Include="Migrations\201702140839008_wwww.cs" />
-    <Compile Include="Migrations\201702140839008_wwww.Designer.cs">
-      <DependentUpon>201702140839008_wwww.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="AbpZeroTemplateDataModule.cs" />
     <Compile Include="Migrations\Seed\Host\DefaultEditionCreator.cs" />
@@ -179,11 +176,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702140839008_wwww.resx">
-      <DependentUpon>201702140839008_wwww.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
